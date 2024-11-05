@@ -1,0 +1,61 @@
+﻿@page
+@model BP.Pages.Posts.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Post</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Post.Title" class="control-label"></label>
+                <input asp-for="Post.Title" class="form-control" />
+                <span asp-validation-for="Post.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Post.Text" class="control-label"></label>
+                <input asp-for="Post.Text" class="form-control" />
+                <span asp-validation-for="Post.Text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Post.CreatedDate" class="control-label"></label>
+                <input asp-for="Post.CreatedDate" class="form-control" />
+                <span asp-validation-for="Post.CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Post.Picture" class="control-label"></label>
+                <input asp-for="Post.Picture" class="form-control" />
+                <span asp-validation-for="Post.Picture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Picture" style="width: 100%;"></label>
+                <img id="imgPicture" style="width:350px;height:350px; object-fit:cover" src="">
+                <input type="file"
+                       accept=".png,.jpg,.jpeg"
+                       asp-for="Input.Picture"
+                       class="form-control"
+                       style="border:0px!important;padding: 0px;padding-top: 10px;padding-bottom: 30px;"
+                       onchange="document.getElementById('imgPicture').src = window.URL.createObjectURL(this.files[0])" />
+                <span asp-validation-for="Input.Picture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -42,3 +42,11 @@ html {
 .asd{
     display: inline;
 }
+
+.header__title {
+    margin-left: 50px;
+}
+.header__title :hover {
+        color: purple;
+}
+

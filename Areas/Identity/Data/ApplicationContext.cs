@@ -26,9 +26,26 @@ public class ApplicationContext : IdentityDbContext<ApplicationUser>
             i.ToTable("AspNetRoles");
             i.HasKey(x => x.Id);
         });
+
+
+        builder.Entity<Post>().Property(z => z.Text).HasMaxLength(150);
+
+        builder.Entity<Post>().HasData(
+            new Post
+            {
+                Id = 1,
+                Title = "Test",
+                Text = "Test text",
+                CreatedDate = DateTime.Now,
+            }
+            );
+
+
         base.OnModelCreating(builder);
         // Customize the ASP.NET Identity model and override the defaults if needed.
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
     }
+    public DbSet<Post> Posts { get; set; }
+
 }
