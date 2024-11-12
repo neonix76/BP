@@ -40,6 +40,16 @@ public class ApplicationContext : IdentityDbContext<ApplicationUser>
             }
             );
 
+        builder.Entity<Post2>().HasData(
+            new Post2
+            {
+                ID = 1,
+                Title = "Test",
+                Text = "Test text",
+            }
+            );
+
+
 
         base.OnModelCreating(builder);
         // Customize the ASP.NET Identity model and override the defaults if needed.
@@ -47,5 +57,6 @@ public class ApplicationContext : IdentityDbContext<ApplicationUser>
         // Add your customizations after calling base.OnModelCreating(builder);
     }
     public DbSet<Post> Posts { get; set; }
+    public DbSet<Post2> Posts2 { get; set; }
 
 }
