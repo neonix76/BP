@@ -4,6 +4,7 @@ using BP.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BP.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20241112211746_QWE")]
+    partial class QWE
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -132,7 +135,7 @@ namespace BP.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 11, 13, 0, 20, 32, 587, DateTimeKind.Local).AddTicks(621),
+                            CreatedDate = new DateTime(2024, 11, 13, 0, 17, 45, 649, DateTimeKind.Local).AddTicks(5601),
                             Text = "Test text",
                             Title = "Test"
                         });
@@ -145,6 +148,10 @@ namespace BP.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Author")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Text")
                         .IsRequired()
@@ -162,6 +169,7 @@ namespace BP.Migrations
                         new
                         {
                             ID = 1,
+                            Author = "123123",
                             Text = "Test text",
                             Title = "Test"
                         });
