@@ -4,11 +4,6 @@
     ViewData["Title"] = "Home page";
 }
 <div class="qqqqq">
-    <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    </div>
-
     <div class="grid">
         <div class="block">
             <a class="nav-link text-dark" asp-area="" asp-page="/Posts2/Create">
@@ -20,6 +15,23 @@
         <div class="block"></div>
         <div class="block"></div>
         <div class="block"></div>
+       <div class="slider">
+            <div class="slides">
+                <div class="slide active">
+                    <img src="image1.jpg" alt="Слайд 1">
+                </div>
+                <div class="slide">
+                    <img src="image2.jpg" alt="Слайд 2">
+                </div>
+                <div class="slide">
+                    <img src="image3.jpg" alt="Слайд 3">
+                </div>
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <script src="script.js"></script>
     </div>
 </div>
 

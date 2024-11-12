@@ -50,3 +50,94 @@ html {
         color: purple;
 }
 
+.picture{
+    text-decoration:none;
+}
+.create__block{
+    margin-left: 15px;
+}
+.create__but{
+    margin: 10px;
+}
+.back{
+    color: black;
+    text-decoration: underline;
+    text-decoration: none;
+}
+.footer1 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links,
+.footer-social {
+    margin-bottom: 10px;
+}
+
+    .footer-links a,
+    .footer-social a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+    }
+
+        .footer-links a:hover,
+        .footer-social a:hover {
+            text-decoration: underline;
+        }
+
+.footer-copy {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    margin-left: 2200px;
+    margin-top: 1300px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+    .slide img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+.reg{
+    margin-left: 1800px;
+}
