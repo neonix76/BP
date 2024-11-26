@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using BP.Areas.Identity.Data;
 using BP.Data;
 
-namespace BP.Pages.Posts
+namespace BP.Pages.Posts2
 {
     public class CreateModel : PageModel
     {
@@ -25,13 +25,7 @@ namespace BP.Pages.Posts
         }
 
         [BindProperty]
-        public Post Post { get; set; } = default!;
-        public InputModel Input { get; set; }
-
-        public class InputModel
-        {
-            public byte[] Picture { get; set; }
-        }
+        public Post2 Post2 { get; set; } = default!;
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
@@ -41,7 +35,7 @@ namespace BP.Pages.Posts
                 return Page();
             }
 
-            _context.Posts.Add(Post);
+            _context.Posts2.Add(Post2);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

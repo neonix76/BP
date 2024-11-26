@@ -50,11 +50,12 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px;
+
 }
 .bg {
     display: block;
     margin: 0 auto;
-    height: 1080px;
+    height: 1920px;
     width: 100%;
     background-image: url(./img/alejandro-escamilla-5-unsplash-scaled.jpg);
     background-position: center center;
