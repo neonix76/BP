@@ -58,5 +58,6 @@ public class ApplicationContext : IdentityDbContext<ApplicationUser>
     }
     public DbSet<Post> Posts { get; set; }
     public DbSet<Post2> Posts2 { get; set; }
+    public DbSet<Category> Categories { get; set; }
 
 }
